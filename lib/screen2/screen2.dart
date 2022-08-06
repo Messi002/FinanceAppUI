@@ -31,18 +31,45 @@ class _Screen2State extends State<Screen2> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Column(
-                children:const <Widget> [
-                  Text(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  const Text(
                     'Current balance',
                     style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
                   ),
-                  SizedBox(
-                    height: 20,
+                  const SizedBox(
+                    height: 5,
                   ),
-                  Text(
-                    'Current balance',
-                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15),
+                  const Text(
+                    '\$ 2,090.20',
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 35),
                   ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  Container(
+                    width: 300,
+                    height: 100,
+                    padding: const EdgeInsets.fromLTRB(16, 16, 40, 16),
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 16, 5, 137),
+                        borderRadius: BorderRadius.circular(16.0)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        //column 1
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [Text('Income'), Text('\$ 2,090.20')],
+                        ),
+                        //column 2
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [Text('Income'), Text('\$ 2,090.20')],
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               ),
             )
