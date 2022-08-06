@@ -48,24 +48,45 @@ class _Screen2State extends State<Screen2> {
                     height: 12,
                   ),
                   Container(
-                    width: 300,
                     height: 100,
-                    padding: const EdgeInsets.fromLTRB(16, 16, 40, 16),
+                    padding: const EdgeInsets.fromLTRB(16, 16, 60, 16),
                     decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 16, 5, 137),
+                        color: Color.fromARGB(255, 39, 27, 166),
                         borderRadius: BorderRadius.circular(16.0)),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         //column 1
                         Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [Text('Income'), Text('\$ 2,090.20')],
+                           mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [Text('Income'), Text('\$ 2,090.20', style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w400),)],
                         ),
                         //column 2
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [Text('Income'), Text('\$ 2,090.20')],
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              'Spent',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w100),
+                            ),
+                            SizedBox(
+                              height: 9,
+                            ),
+                            Text(
+                              '\$ 1,290',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w400),
+                            )
+                          ],
                         ),
                       ],
                     ),
