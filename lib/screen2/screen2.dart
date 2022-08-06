@@ -12,11 +12,12 @@ class _Screen2State extends State<Screen2> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-
+      drawer: Drawer(),
+  appBar: AppBar(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            
+
           ),
         ),
       ),
