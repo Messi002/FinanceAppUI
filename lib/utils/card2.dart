@@ -17,26 +17,27 @@ class Card2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 70,
-      padding: const EdgeInsets.symmetric(horizontal: 13.0),
       decoration: BoxDecoration(
-          color: Color.fromARGB(255, 218, 121, 121),
+          // color: Color.fromARGB(255, 218, 121, 121),
           borderRadius: BorderRadius.circular(16.0)),
       child: Row(
         children: [
           Expanded(
-              flex: 1,
               child: Container(
-                height: 35,
-                padding: EdgeInsets.fromLTRB(10, 5, 0, 5),
-                decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 208, 202, 202),
-                    borderRadius: BorderRadius.circular(10)),
-                child: Icon(icon),
-              )),
+            height: 40,
+            // width: 30,
+            // padding: EdgeInsets.fromLTRB(10, 5, 0, 5),
+            // padding: const EdgeInsets.only(left: 13.0),
+
+            decoration: BoxDecoration(
+                color: Color.fromARGB(255, 208, 202, 202),
+                borderRadius: BorderRadius.circular(10)),
+            child: Icon(icon),
+          )),
           Expanded(
-              flex: 3,
+              flex: 4,
               child: Padding(
-                padding: const EdgeInsets.only(left: 16.0),
+                padding: const EdgeInsets.only(left: 12.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,6 +59,7 @@ class Card2 extends StatelessWidget {
           Expanded(
               child: Text(
             text3,
+            textAlign: TextAlign.end,
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 18,

@@ -102,7 +102,11 @@ class _Screen2State extends State<Screen2> {
                         ),
                       ],
                     ),
-                    Card2(text1: "Grocery", text2: "10 min ago", text3: "- \$35", icon: Icons.local_grocery_store)
+                    Card2(
+                        text1: "Grocery",
+                        text2: "10 min ago",
+                        text3: "- \$35",
+                        icon: Icons.local_grocery_store_outlined),
                   ],
                 ),
               )
@@ -113,3 +117,12 @@ class _Screen2State extends State<Screen2> {
     );
   }
 }
+
+
+//all_inbox_outlined
+//bookmark outline rounded
+//event note outlined
+//home rounded
+//shopping bag outlined
+//short text outlined
+//toys outlined
