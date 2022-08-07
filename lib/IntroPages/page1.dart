@@ -17,14 +17,14 @@ class Page1 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height / 1.9,
+              height: MediaQuery.of(context).size.height * 0.59,
             ),
             Container(
               child: Text(
-                "Best Way To \nTracking Your \nMoney...",
+                "Hey!\nWelcome to \nXpenseTracker...",
                 textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 35,
                   fontWeight: FontWeight.w500,
                   color: Color.fromARGB(255, 229, 223, 223),
                   wordSpacing: 3,
@@ -32,17 +32,17 @@ class Page1 extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height / 35,
+              height: MediaQuery.of(context).size.height / 45,
             ),
             Container(
               child: Text(
-                "Control and track what you spend \nyour money on",
+                "Take control from NOW on.",
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                   color: Colors.grey[500],
-                  wordSpacing: 3,
+                  wordSpacing: 2,
                 ),
               ),
             ),
