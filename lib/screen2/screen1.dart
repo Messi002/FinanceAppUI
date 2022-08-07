@@ -77,7 +77,7 @@ class _Screen1State extends State<Screen1> {
                   ),
                 ),
               ):Visibility(
-                visible: isVisible?true:false, //!onPage2,
+                visible: isVisible,
                 child: GestureDetector(
                   onTap: () {
                     _controller.jumpToPage(2);
