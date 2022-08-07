@@ -3,6 +3,7 @@
 import 'package:app/IntroPages/page1.dart';
 import 'package:app/IntroPages/page2.dart';
 import 'package:app/IntroPages/page3.dart';
+import 'package:app/utils/intro_button.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -15,6 +16,9 @@ class Screen1 extends StatefulWidget {
 
 class _Screen1State extends State<Screen1> {
   PageController _controller = PageController();
+
+  bool onLastPage = false;
+  bool isVisible = true;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -22,6 +26,12 @@ class _Screen1State extends State<Screen1> {
             body: Stack(
       children: [
         PageView(
+          onPageChanged: (index) {
+            setState(() {
+              onLastPage = (index == 2);
+              isVisible = !(index ==2);
+            });
+          },
           controller: _controller,
           children: [
             Page1(),
@@ -30,7 +40,7 @@ class _Screen1State extends State<Screen1> {
           ],
         ),
         Container(
-          alignment: Alignment(-0.7, 0.75),
+          alignment: Alignment(-0.8, 0.73),
           child: SmoothPageIndicator(
             controller: _controller,
             count: 3,
@@ -42,6 +52,42 @@ class _Screen1State extends State<Screen1> {
               dotHeight: 9,
               dotWidth: 9,
             ),
+          ),
+        ),
+        Container(
+          alignment: Alignment(-0.8, 0.85),
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Visibility(
+                visible: isVisible,
+                child: GestureDetector(
+                  onTap: () {
+                    _controller.jumpToPage(2);
+                  },
+                  child: Text(
+                    "Skip",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+
+              Visibility(
+                visible: isVisible,
+                child: GestureDetector(
+                  onTap: () {
+                    _controller.nextPage(
+                        duration: Duration(milliseconds: 500),
+                        curve: Curves.easeIn);
+                  },
+                  child: Text(
+                    "Next",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ],
