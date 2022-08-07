@@ -20,29 +20,31 @@ class _Screen1State extends State<Screen1> {
 
   bool onLastPage = false;
   bool isVisible = true;
+  bool onPage2 = false;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
             body: Stack(
-                children: [
-                  PageView(
-                    onPageChanged: (index) {
+      children: [
+        PageView(
+          onPageChanged: (index) {
             setState(() {
               onLastPage = (index == 2);
               isVisible = !(index == 2);
+              onPage2 = (index == 1);
             });
-                    },
-                    controller: _controller,
-                    children: [
+          },
+          controller: _controller,
+          children: [
             Page1(),
             Page2(),
             Page3(),
-                    ],
-                  ),
-                  Container(
-                    alignment: Alignment(-0.8, 0.73),
-                    child: SmoothPageIndicator(
+          ],
+        ),
+        Container(
+          alignment: Alignment(-0.8, 0.73),
+          child: SmoothPageIndicator(
             controller: _controller,
             count: 3,
             effect: JumpingDotEffect(
@@ -53,16 +55,29 @@ class _Screen1State extends State<Screen1> {
               dotHeight: 9,
               dotWidth: 9,
             ),
-                    ),
-                  ),
-                  Container(
-                    alignment: Alignment(-0.8, 0.85),
-                    padding: const EdgeInsets.symmetric(horizontal: 30),
-                    child: Row(
+          ),
+        ),
+        Container(
+          alignment: Alignment(-0.8, 0.85),
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+
+              onPage2?
               Visibility(
-                visible: isVisible,
+                visible: onPage2,
+                child: GestureDetector(
+                  onTap: () {
+                    _controller.jumpToPage(2);
+                  },
+                  child: Text(
+                    "Prev",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ):Visibility(
+                visible: isVisible?true:false, //!onPage2,
                 child: GestureDetector(
                   onTap: () {
                     _controller.jumpToPage(2);
@@ -73,6 +88,10 @@ class _Screen1State extends State<Screen1> {
                   ),
                 ),
               ),
+
+
+
+
               Visibility(
                 visible: isVisible,
                 child: GestureDetector(
@@ -88,25 +107,26 @@ class _Screen1State extends State<Screen1> {
                 ),
               ),
             ],
-                    ),
-                  ),
-                  Visibility(
-            visible: onLastPage,
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Screen2(),
-                  ),
-                );
-              },
-              child: Container(
-                alignment: Alignment(-0.8, 0.9),
-                child: MyButton(),
-              ),
-            ),),
-                ],
-              )));
+          ),
+        ),
+        // Visibility(
+        //   visible: onLastPage,
+        //   child: GestureDetector(
+        //     onTap: () {
+        //       Navigator.push(
+        //         context,
+        //         MaterialPageRoute(
+        //           builder: (context) => Screen2(),
+        //         ),
+        //       );
+        //     },
+        //     child: Container(
+        //       alignment: Alignment(-0.8, 0.9),
+        //       child: MyButton(),
+        //     ),
+        //   ),
+        // ),
+      ],
+    )));
   }
 }
