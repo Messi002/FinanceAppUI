@@ -36,7 +36,7 @@ class Page1 extends StatelessWidget {
             ),
             Container(
               child: Text(
-                "Take control from NOW on.",
+                "Swap your way through.",
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   fontSize: 16,
