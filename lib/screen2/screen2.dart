@@ -117,6 +117,11 @@ class _Screen2State extends State<Screen2> {
                         text2: "10 min ago",
                         text3: "- \$35",
                         icon: Icons.local_grocery_store_outlined),
+                         Card2(
+                        text1: "Grocery",
+                        text2: "10 min ago",
+                        text3: "- \$35",
+                        icon: Icons.local_grocery_store_outlined),
                   ],
                 ),
               )
