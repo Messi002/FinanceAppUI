@@ -14,7 +14,7 @@ class Page1 extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height / 2,
+            height: MediaQuery.of(context).size.height * 0.7,
           ),
           Container(
             color: Colors.amber,
