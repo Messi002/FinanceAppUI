@@ -25,24 +25,24 @@ class _Screen1State extends State<Screen1> {
     return SafeArea(
         child: Scaffold(
             body: Stack(
-      children: [
-        PageView(
-          onPageChanged: (index) {
+                children: [
+                  PageView(
+                    onPageChanged: (index) {
             setState(() {
               onLastPage = (index == 2);
               isVisible = !(index == 2);
             });
-          },
-          controller: _controller,
-          children: [
+                    },
+                    controller: _controller,
+                    children: [
             Page1(),
             Page2(),
             Page3(),
-          ],
-        ),
-        Container(
-          alignment: Alignment(-0.8, 0.73),
-          child: SmoothPageIndicator(
+                    ],
+                  ),
+                  Container(
+                    alignment: Alignment(-0.8, 0.73),
+                    child: SmoothPageIndicator(
             controller: _controller,
             count: 3,
             effect: JumpingDotEffect(
@@ -53,12 +53,12 @@ class _Screen1State extends State<Screen1> {
               dotHeight: 9,
               dotWidth: 9,
             ),
-          ),
-        ),
-        Container(
-          alignment: Alignment(-0.8, 0.85),
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: Row(
+                    ),
+                  ),
+                  Container(
+                    alignment: Alignment(-0.8, 0.85),
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Visibility(
@@ -88,9 +88,9 @@ class _Screen1State extends State<Screen1> {
                 ),
               ),
             ],
-          ),
-        ),
-        Visibility(
+                    ),
+                  ),
+                  Visibility(
             visible: onLastPage,
             child: GestureDetector(
               onTap: () {
@@ -105,8 +105,8 @@ class _Screen1State extends State<Screen1> {
                 alignment: Alignment(-0.8, 0.9),
                 child: MyButton(),
               ),
-            )),
-      ],
-    )));
+            ),),
+                ],
+              )));
   }
 }

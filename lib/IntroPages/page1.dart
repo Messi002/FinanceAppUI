@@ -9,7 +9,19 @@ class Page1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: MediaQuery.of(context).size.height,
       decoration: kBgDecoration,
+      child: Column(
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height / 2,
+          ),
+          Container(
+            color: Colors.amber,
+            child: Text("hello world"),
+          )
+        ],
+      ),
     );
   }
 }
