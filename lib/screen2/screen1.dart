@@ -1,3 +1,6 @@
+import 'package:app/IntroPages/page1.dart';
+import 'package:app/IntroPages/page2.dart';
+import 'package:app/IntroPages/page3.dart';
 import 'package:flutter/material.dart';
 
 class Screen1 extends StatefulWidget {
@@ -11,14 +14,13 @@ class _Screen1State extends State<Screen1> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(
-      body: Container(
-          padding: const EdgeInsets.symmetric(horizontal:25.0 ,vertical: 10),
-        child: Column(
-          children: [
-            
-          ],
-        ),
-      ),
+      body: PageView(
+        children: [
+          Page1(),
+          Page2(),
+          Page3(),
+        ],
+      )
     ));
   }
 }
