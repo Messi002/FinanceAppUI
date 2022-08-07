@@ -1,3 +1,4 @@
+import 'package:app/screen2/screen1.dart';
 import 'package:app/screen2/screen2.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
       ),
-      home: Screen2(),
+      home:const Screen1(),
     );
   }
 }
