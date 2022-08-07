@@ -16,7 +16,7 @@ class Card2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 70,
+      height: 50,
       decoration: BoxDecoration(
           // color: Color.fromARGB(255, 218, 121, 121),
           borderRadius: BorderRadius.circular(16.0)),

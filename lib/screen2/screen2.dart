@@ -17,7 +17,9 @@ class _Screen2State extends State<Screen2> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],
-      drawer: const Drawer(),
+      drawer: Drawer(
+        backgroundColor: Colors.grey[200],
+      ),
       appBar: AppBar(
         backgroundColor: Colors.grey[300],
         elevation: 0.0,
@@ -32,6 +34,7 @@ class _Screen2State extends State<Screen2> {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: AlwaysScrollableScrollPhysics(),
           child: Column(
             children: [
               Padding(
@@ -107,21 +110,21 @@ class _Screen2State extends State<Screen2> {
                         text2: "10 min ago",
                         text3: "- \$35",
                         icon: Icons.local_grocery_store_outlined),
-                         Card2(
-                        text1: "Grocery",
-                        text2: "10 min ago",
-                        text3: "- \$35",
-                        icon: Icons.local_grocery_store_outlined),
-                         Card2(
-                        text1: "Grocery",
-                        text2: "10 min ago",
-                        text3: "- \$35",
-                        icon: Icons.local_grocery_store_outlined),
-                         Card2(
-                        text1: "Grocery",
-                        text2: "10 min ago",
-                        text3: "- \$35",
-                        icon: Icons.local_grocery_store_outlined),
+                    Card2(
+                        text1: "Shopping",
+                        text2: "14 min ago",
+                        text3: "- \$12",
+                        icon: Icons.shopping_bag_outlined),
+                    Card2(
+                        text1: "Transport",
+                        text2: "2 hours ago",
+                        text3: "- \$43",
+                        icon: Icons.toys_outlined),
+                    Card2(
+                        text1: "Bills",
+                        text2: "3 hours ago",
+                        text3: "- \$96",
+                        icon: Icons.event_note_outlined),
                   ],
                 ),
               )
