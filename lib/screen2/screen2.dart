@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:app/utils/card1.dart';
+import 'package:app/utils/card2.dart';
 import 'package:app/utils/main_board_container.dart';
 import 'package:flutter/material.dart';
 
@@ -81,13 +82,17 @@ class _Screen2State extends State<Screen2> {
                       height: 20,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Expences"),
+                        Text(
+                          "Expences",
+                          style: TextStyle(fontWeight: FontWeight.w500),
+                        ),
                         Container(
-                          padding: const EdgeInsets.all(4),
+                          padding: const EdgeInsets.all(6),
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0),
-                            border: Border.all(color: Colors.black),
+                            borderRadius: BorderRadius.circular(6.0),
+                            border: Border.all(color: Colors.grey),
                           ),
                           child: Text(
                             "View All",
@@ -96,7 +101,8 @@ class _Screen2State extends State<Screen2> {
                           ),
                         ),
                       ],
-                    )
+                    ),
+                    Card2(text1: "Grocery", text2: "10 min ago", text3: "- \$35", icon: Icons.local_grocery_store)
                   ],
                 ),
               )
