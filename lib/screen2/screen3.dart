@@ -20,9 +20,12 @@ class _Screen3State extends State<Screen3> {
               onTap: () {
                 Navigator.pop(context);
               },
-              child: Icon(
-                Icons.arrow_back_ios,
-                size: 20,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 30.0),
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  size: 20,
+                ),
               )),
           backgroundColor: Color.fromARGB(255, 29, 63, 238),
           elevation: 0.0,
@@ -30,7 +33,7 @@ class _Screen3State extends State<Screen3> {
           actionsIconTheme: const IconThemeData(color: Colors.white),
           actions: const [
             Padding(
-              padding: EdgeInsets.only(right: 16.0),
+              padding: EdgeInsets.only(right: 30.0),
               child: Icon(Icons.person),
             )
           ],
@@ -43,7 +46,7 @@ class _Screen3State extends State<Screen3> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(50), topRight: Radius.circular(50)),
+                  topLeft: Radius.circular(70), topRight: Radius.circular(70)),
             ),
             child: Text('hellow'),
           ),
