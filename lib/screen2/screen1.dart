@@ -3,6 +3,7 @@
 import 'package:app/IntroPages/page1.dart';
 import 'package:app/IntroPages/page2.dart';
 import 'package:app/IntroPages/page3.dart';
+import 'package:app/screen2/screen2.dart';
 import 'package:app/utils/intro_button.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -18,6 +19,7 @@ class _Screen1State extends State<Screen1> {
   PageController _controller = PageController();
 
   bool onLastPage = false;
+  bool isVisible = true;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,6 +30,7 @@ class _Screen1State extends State<Screen1> {
           onPageChanged: (index) {
             setState(() {
               onLastPage = (index == 2);
+              isVisible = !(index == 2);
             });
           },
           controller: _controller,
@@ -54,11 +57,10 @@ class _Screen1State extends State<Screen1> {
         ),
         Container(
           alignment: Alignment(-0.8, 0.85),
-          // padding: const EdgeInsets.symmetric(horizontal: 30),
+          padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-
               Visibility(
                 visible: isVisible,
                 child: GestureDetector(
@@ -71,26 +73,39 @@ class _Screen1State extends State<Screen1> {
                   ),
                 ),
               ),
-
               Visibility(
                 visible: isVisible,
                 child: GestureDetector(
-                        onTap: () {
-                          _controller.nextPage(
-                              duration: Duration(milliseconds: 500),
-                              curve: Curves.easeIn);
-                        },
-                        child: Text(
-                          "Next",
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
+                  onTap: () {
+                    _controller.nextPage(
+                        duration: Duration(milliseconds: 500),
+                        curve: Curves.easeIn);
+                  },
+                  child: Text(
+                    "Next",
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
               ),
             ],
-            
           ),
         ),
-        // Container( alignment: Alignment(-0.8, 0.9), child: MyButton())
+        Visibility(
+            visible: onLastPage,
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Screen2(),
+                  ),
+                );
+              },
+              child: Container(
+                alignment: Alignment(-0.8, 0.9),
+                child: MyButton(),
+              ),
+            )),
       ],
     )));
   }
