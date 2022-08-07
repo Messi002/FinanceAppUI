@@ -19,7 +19,7 @@ class Card1 extends StatelessWidget {
                     height: 70,
                     padding: const EdgeInsets.symmetric(horizontal: 13.0),
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 208, 202, 202),
+                        color: const Color.fromARGB(255, 208, 202, 202),
                         borderRadius: BorderRadius.circular(16.0)),
                     child: Row(
                       children: [
@@ -27,14 +27,14 @@ class Card1 extends StatelessWidget {
                             flex: 1,
                             child: Container(
                               height: 35,
-                              padding: EdgeInsets.fromLTRB(10, 5, 0, 5),
+                              padding: const EdgeInsets.fromLTRB(10, 5, 0, 5),
                               decoration: BoxDecoration(
                                   color: color,
                                   borderRadius: BorderRadius.circular(10)),
                               child: Row(children: [
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
+                                  children: const [
                                     Text(
                                       '....',
                                       style: TextStyle(color: Colors.white),
@@ -44,12 +44,12 @@ class Card1 extends StatelessWidget {
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    SizedBox(
+                                    const SizedBox(
                                       height: 4,
                                     ),
                                     Text(
                                       text1,
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                           color: Colors.white, fontSize: 10),
                                     )
                                   ],
@@ -66,11 +66,11 @@ class Card1 extends StatelessWidget {
                                 children: [
                                   Text(
                                     text2,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 16),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 2,
                                   ),
                                   Text(text3,
@@ -80,7 +80,7 @@ class Card1 extends StatelessWidget {
                                 ],
                               ),
                             )),
-                        Expanded(
+                        const Expanded(
                           child: Icon(
                             Icons.arrow_forward_ios,
                             size: 18,

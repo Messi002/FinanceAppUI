@@ -21,7 +21,7 @@ class Page3 extends StatelessWidget {
             ),
             Container(
               child: Text(
-                "Best Way To \nTracking Your \nMoney...",
+                "Best Way To \nTrack Your \nMoney...",
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   fontSize: 40,
@@ -41,7 +41,7 @@ class Page3 extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
-                  color: Colors.grey[500],
+                  color: Colors.white54,
                   wordSpacing: 2,
                 ),
               ),

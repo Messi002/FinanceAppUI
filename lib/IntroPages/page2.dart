@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:app/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -39,7 +41,7 @@ class Page2 extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w500,
-                  color: Colors.grey[500],
+                  color: Colors.white54,
                 ),
               ),
             ),

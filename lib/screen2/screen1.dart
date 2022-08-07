@@ -69,7 +69,7 @@ class _Screen1State extends State<Screen1> {
                 visible: onPage2,
                 child: GestureDetector(
                   onTap: () {
-                    _controller.previousPage(duration: Duration(milliseconds: 500), curve: Curves.bounceInOut);
+                    _controller.previousPage(duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
                   },
                   child: Text(
                     "Prev",
@@ -98,7 +98,7 @@ class _Screen1State extends State<Screen1> {
                   onTap: () {
                     _controller.nextPage(
                         duration: Duration(milliseconds: 500),
-                        curve: Curves.bounceInOut);
+                        curve: Curves.easeInOut);
                   },
                   child: Text(
                     "Next",
