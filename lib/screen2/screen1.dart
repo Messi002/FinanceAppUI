@@ -69,7 +69,7 @@ class _Screen1State extends State<Screen1> {
                 visible: onPage2,
                 child: GestureDetector(
                   onTap: () {
-                    _controller.jumpToPage(2);
+                    _controller.previousPage(duration: Duration(milliseconds: 500), curve: Curves.bounceInOut);
                   },
                   child: Text(
                     "Prev",
@@ -98,7 +98,7 @@ class _Screen1State extends State<Screen1> {
                   onTap: () {
                     _controller.nextPage(
                         duration: Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
+                        curve: Curves.bounceInOut);
                   },
                   child: Text(
                     "Next",
@@ -109,23 +109,23 @@ class _Screen1State extends State<Screen1> {
             ],
           ),
         ),
-        // Visibility(
-        //   visible: onLastPage,
-        //   child: GestureDetector(
-        //     onTap: () {
-        //       Navigator.push(
-        //         context,
-        //         MaterialPageRoute(
-        //           builder: (context) => Screen2(),
-        //         ),
-        //       );
-        //     },
-        //     child: Container(
-        //       alignment: Alignment(-0.8, 0.9),
-        //       child: MyButton(),
-        //     ),
-        //   ),
-        // ),
+        Visibility(
+          visible: onLastPage,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Screen2(),
+                ),
+              );
+            },
+            child: Container(
+              alignment: Alignment(-0.8, 0.9),
+              child: MyButton(),
+            ),
+          ),
+        ),
       ],
     )));
   }
