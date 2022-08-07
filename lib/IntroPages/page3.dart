@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:app/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +17,7 @@ class Page3 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height / 2,
+              height: MediaQuery.of(context).size.height / 1.8,
             ),
             Container(
               child: Text(
@@ -30,7 +32,7 @@ class Page3 extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height / 40,
+              height: MediaQuery.of(context).size.height / 70,
             ),
             Container(
               child: Text(

@@ -15,32 +15,31 @@ class Page2 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height / 2,
+              height: MediaQuery.of(context).size.height / 1.8,
             ),
             Container(
               child: Text(
-                "Best Way To \nTracking Your \nMoney...",
+                "Your MONEY,\nour \nPRIORITY...",
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.w500,
                   color: Color.fromARGB(255, 229, 223, 223),
-                  wordSpacing: 3,
+                  wordSpacing: 2,
                 ),
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height / 40,
+              height: MediaQuery.of(context).size.height / 70,
             ),
             Container(
               child: Text(
-                "Control and track what you spend \nyour money on",
+                "Security and Satisfaction,\nWE bring to YOU.",
                 textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 15,
                   fontWeight: FontWeight.w500,
                   color: Colors.grey[500],
-                  wordSpacing: 2,
                 ),
               ),
             ),
