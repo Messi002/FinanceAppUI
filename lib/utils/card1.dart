@@ -56,7 +56,19 @@ class Card1 extends StatelessWidget {
                 ]),
               )),
           Expanded(
-              flex:
+              flex: 3,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      text2,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 16),
+                    ),
+                    const SizedBox(
                       height: 2,
                     ),
                     Text(text3,

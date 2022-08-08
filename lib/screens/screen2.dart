@@ -58,22 +58,7 @@ class _Screen2State extends State<Screen2> {
                         style: TextStyle(fontSize: 15),
                       ),
                       const SizedBox(
-                        height: 5,
-                      ),
-                      const Text(
-                        '\$ 2,090.20',
-                        style: const TextStyle(
-                            fontWeight: FontWeight.w600, fontSize: 35),
-                      ),
-                      const SizedBox(
-                        height: 12,
-                      ),
-                      const MyCard(),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      const Text('Your cards'),
-                      SizedBox(
+                        
                         height: 10,
                       ),
                       Card1(
