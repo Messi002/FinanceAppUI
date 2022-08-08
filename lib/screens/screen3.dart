@@ -69,11 +69,13 @@ class _Screen3State extends State<Screen3> {
                         text1: "Choose category",
                         icon: Icons.all_inbox_outlined)),
                 Expanded(
+                    flex: 0,
                     child: MyButton(
-                  text: "Continue",
-                  color: Colors.black,
-                  textColor: Colors.white,
-                )),
+                      text: "Continue",
+                      color: Colors.black,
+                      textColor: Colors.white,
+                      isExtended: false,
+                    )),
                 Expanded(
                     child: Card3(
                         text1: "Choose category",

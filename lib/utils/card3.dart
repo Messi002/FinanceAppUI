@@ -13,18 +13,18 @@ class Card3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
+      height: 45,
       padding: const EdgeInsets.symmetric(horizontal: 13.0),
       decoration: BoxDecoration(
           color: Color.fromARGB(31, 141, 134, 134),
-          borderRadius: BorderRadius.circular(16.0)),
+          borderRadius: BorderRadius.circular(9.0)),
       child: Row(
         children: [
           Expanded(
               flex: 1,
               child: Container(
                 height: 35,
-                padding: const EdgeInsets.fromLTRB(10, 5, 0, 5),
+                padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
                 decoration:
                     BoxDecoration(borderRadius: BorderRadius.circular(10)),
                 child: Icon(icon),
@@ -32,7 +32,7 @@ class Card3 extends StatelessWidget {
           Expanded(
               flex: 3,
               child: Padding(
-                padding: const EdgeInsets.only(left: 16.0),
+                padding: const EdgeInsets.only(left: 2.0),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,

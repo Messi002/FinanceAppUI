@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:app/screen2/screen3.dart';
+import 'package:app/screens/screen3.dart';
 import 'package:app/utils/card1.dart';
 import 'package:app/utils/card2.dart';
 import 'package:app/utils/main_board_container.dart';

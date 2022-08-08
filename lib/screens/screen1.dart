@@ -3,7 +3,7 @@
 import 'package:app/IntroPages/page1.dart';
 import 'package:app/IntroPages/page2.dart';
 import 'package:app/IntroPages/page3.dart';
-import 'package:app/screen2/screen2.dart';
+import 'package:app/screens/screen2.dart';
 import 'package:app/utils/intro_button.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -122,7 +122,7 @@ class _Screen1State extends State<Screen1> {
             },
             child: Container(
               alignment: Alignment(-0.8, 0.9),
-              child: MyButton(text: "Get Started",color: Colors.white,textColor: Colors.black,),
+              child: MyButton(text: "Get Started",color: Colors.white,textColor: Colors.black,isExtended: true,),
             ),
           ),
         ),

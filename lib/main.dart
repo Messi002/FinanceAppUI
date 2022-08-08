@@ -1,5 +1,5 @@
-import 'package:app/screen2/screen1.dart';
-import 'package:app/screen2/screen2.dart';
+import 'package:app/screens/screen1.dart';
+import 'package:app/screens/screen2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
