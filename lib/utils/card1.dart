@@ -24,6 +24,20 @@ class Card1 extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
+              flex: 1,
+              child: Container(
+                height: 35,
+                padding: const EdgeInsets.fromLTRB(10, 5, 0, 5),
+                decoration: BoxDecoration(
+                    color: color, borderRadius: BorderRadius.circular(10)),
+                child: Row(children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        '....',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     ],
                   ),
                   Column(
@@ -42,19 +56,7 @@ class Card1 extends StatelessWidget {
                 ]),
               )),
           Expanded(
-              flex: 3,
-              child: Padding(
-                padding: const EdgeInsets.only(left: 16.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      text2,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 16),
-                    ),
-                    const SizedBox(
+              flex:
                       height: 2,
                     ),
                     Text(text3,
