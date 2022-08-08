@@ -65,7 +65,44 @@ class _Screen3State extends State<Screen3> {
                             fontSize: 20, fontWeight: FontWeight.w500),
                       ),
                     )),
-                Expanded(flex: 1, child: Text("hello")),
+                Expanded(
+                    flex: 1,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        RichText(
+                            text: TextSpan(children: <TextSpan>[
+                          TextSpan(
+                            text: "\$  ",
+                            style: TextStyle(
+                                color: Colors.grey[400], fontSize: 40),
+                          ),
+                          TextSpan(
+                            text: "2,090.20",
+                            style: TextStyle(color: Colors.black, fontSize: 40),
+                          ),
+                        ])),
+                        SizedBox(
+                          height: 7,
+                        ),
+                        Divider(
+                          color: Colors.grey[300],
+                          height: 8,
+                        ),
+                        SizedBox(
+                          height: 7,
+                        ),
+                        Text(
+                          "Type here",
+                          style:
+                              TextStyle(color: Colors.grey[300], fontSize: 11),
+                        ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                      ],
+                    )),
                 Expanded(
                     flex: 0,
                     child: Card3(

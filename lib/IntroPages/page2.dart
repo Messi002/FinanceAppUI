@@ -24,7 +24,7 @@ class Page2 extends StatelessWidget {
                 "Your MONEY,\nour \nPRIORITY...",
                 textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 38,
                   fontWeight: FontWeight.w500,
                   color: Color.fromARGB(255, 229, 223, 223),
                   wordSpacing: 2,
