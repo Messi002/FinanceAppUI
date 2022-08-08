@@ -24,20 +24,6 @@ class Card1 extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-              flex: 1,
-              child: Container(
-                height: 35,
-                padding: const EdgeInsets.fromLTRB(10, 5, 0, 5),
-                decoration: BoxDecoration(
-                    color: color, borderRadius: BorderRadius.circular(10)),
-                child: Row(children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const [
-                      Text(
-                        '....',
-                        style: TextStyle(color: Colors.white),
-                      ),
                     ],
                   ),
                   Column(
