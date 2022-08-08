@@ -77,7 +77,24 @@ class _Screen3State extends State<Screen3> {
                             text: "\$  ",
                             style: TextStyle(
                                 color: Colors.grey[400], fontSize: 40),
-                          
+                          ),
+                          TextSpan(
+                            text: "2,090.20",
+                            style: TextStyle(color: Colors.black, fontSize: 40),
+                          ),
+                        ])),
+                        SizedBox(
+                          height: 7,
+                        ),
+                        Divider(
+                          color: Colors.grey[300],
+                          height: 8,
+                        ),
+                        SizedBox(
+                          height: 7,
+                        ),
+                        Text(
+                          "Type here",
                           style:
                               TextStyle(color: Colors.grey[300], fontSize: 11),
                         ),
@@ -106,14 +123,6 @@ class _Screen3State extends State<Screen3> {
                   height: 30,
                 ),
                 NumDisplay("1", "2", "3"),
-                SizedBox(
-                  height: 16,
-                ),
-                NumDisplay("4", "5", "6"),
-                SizedBox(
-                  height: 16,
-                ),
-                NumDisplay("7", "8", "9"),
                 SizedBox(
                   height: 16,
                 ),
