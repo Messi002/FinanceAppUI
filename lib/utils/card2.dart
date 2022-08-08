@@ -30,7 +30,7 @@ class Card2 extends StatelessWidget {
             // padding: const EdgeInsets.only(left: 13.0),
 
             decoration: BoxDecoration(
-                color: Color.fromARGB(255, 208, 202, 202),
+                color: Color.fromARGB(31, 141, 134, 134),
                 borderRadius: BorderRadius.circular(10)),
             child: Icon(icon),
           )),

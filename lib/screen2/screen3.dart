@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:app/utils/card3.dart';
+import 'package:app/utils/intro_button.dart';
 import 'package:flutter/material.dart';
 
 class Screen3 extends StatefulWidget {
@@ -38,16 +40,17 @@ class _Screen3State extends State<Screen3> {
             )
           ],
         ),
-        body: SingleChildScrollView(
-          child: Container(
-            margin: const EdgeInsets.only(top: 12),
-            height: MediaQuery.of(context).size.height,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(70), topRight: Radius.circular(70)),
-            ),
+        body: Container(
+          margin: const EdgeInsets.only(top: 12),
+          height: MediaQuery.of(context).size.height,
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: Color.fromARGB(255, 252, 250, 250),
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(70), topRight: Radius.circular(70)),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
             child: Column(
               children: [
                 Expanded(
@@ -59,7 +62,22 @@ class _Screen3State extends State<Screen3> {
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                   ),
                 )),
-                Expanded(flex: 4, child: Text("hello")),
+                Expanded(child: Text("hello")),
+                Expanded(
+                    flex: 0,
+                    child: Card3(
+                        text1: "Choose category",
+                        icon: Icons.all_inbox_outlined)),
+                Expanded(
+                    child: MyButton(
+                  text: "Continue",
+                  color: Colors.black,
+                  textColor: Colors.white,
+                )),
+                Expanded(
+                    child: Card3(
+                        text1: "Choose category",
+                        icon: Icons.all_inbox_outlined)),
               ],
             ),
           ),

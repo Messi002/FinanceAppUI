@@ -122,7 +122,7 @@ class _Screen1State extends State<Screen1> {
             },
             child: Container(
               alignment: Alignment(-0.8, 0.9),
-              child: MyButton(),
+              child: MyButton(text: "Get Started",color: Colors.white,textColor: Colors.black,),
             ),
           ),
         ),

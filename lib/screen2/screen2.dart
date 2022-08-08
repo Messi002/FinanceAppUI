@@ -18,12 +18,12 @@ class _Screen2State extends State<Screen2> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.grey[300],
+        backgroundColor: Color.fromARGB(255, 252, 250, 250),
         drawer: Drawer(
           backgroundColor: Colors.grey[200],
         ),
         appBar: AppBar(
-          backgroundColor: Colors.grey[300],
+          backgroundColor: Color.fromARGB(255, 252, 250, 250),
           elevation: 0.0,
           iconTheme: const IconThemeData(color: Colors.black),
           actionsIconTheme: const IconThemeData(color: Colors.black),
