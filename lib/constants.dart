@@ -11,3 +11,5 @@ const kBgDecoration = BoxDecoration(
   stops: [0.0, 1.0],
   tileMode: TileMode.clamp,
 ));
+
+const kTextStyle = TextStyle(fontWeight: FontWeight.bold, fontSize: 17);

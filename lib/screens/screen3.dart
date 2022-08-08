@@ -1,5 +1,6 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:app/constants.dart';
 import 'package:app/utils/card3.dart';
 import 'package:app/utils/intro_button.dart';
 import 'package:flutter/material.dart';
@@ -54,20 +55,25 @@ class _Screen3State extends State<Screen3> {
             child: Column(
               children: [
                 Expanded(
+                    flex: 0,
                     child: Container(
-                  margin: const EdgeInsets.only(top: 20),
-                  // alignment: Alignment.center,
-                  child: Text(
-                    "New Expences",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-                  ),
-                )),
-                Expanded(child: Text("hello")),
+                      margin: const EdgeInsets.only(top: 20),
+                      // alignment: Alignment.center,
+                      child: Text(
+                        "New Expences",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w500),
+                      ),
+                    )),
+                Expanded(flex: 1, child: Text("hello")),
                 Expanded(
                     flex: 0,
                     child: Card3(
                         text1: "Choose category",
                         icon: Icons.all_inbox_outlined)),
+                SizedBox(
+                  height: 13,
+                ),
                 Expanded(
                     flex: 0,
                     child: MyButton(
@@ -76,15 +82,43 @@ class _Screen3State extends State<Screen3> {
                       textColor: Colors.white,
                       isExtended: false,
                     )),
-                Expanded(
-                    child: Card3(
-                        text1: "Choose category",
-                        icon: Icons.all_inbox_outlined)),
+                SizedBox(
+                  height: 30,
+                ),
+                NumDisplay("1", "2", "3"),
+                SizedBox(
+                  height: 16,
+                ),
+                NumDisplay("4", "5", "6"),
+                SizedBox(
+                  height: 16,
+                ),
+                NumDisplay("7", "8", "9"),
+                SizedBox(
+                  height: 16,
+                ),
+                NumDisplay(".", "0", "x"),
+                SizedBox(
+                  height: 24,
+                ),
               ],
             ),
           ),
         ),
       ),
     );
+  }
+
+  Expanded NumDisplay(String a, String b, String c) {
+    return Expanded(
+        flex: 0,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(a, style: kTextStyle),
+            Text(b, style: kTextStyle),
+            Text(c, style: kTextStyle),
+          ],
+        ));
   }
 }
