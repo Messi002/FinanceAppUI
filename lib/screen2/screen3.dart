@@ -48,7 +48,20 @@ class _Screen3State extends State<Screen3> {
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(70), topRight: Radius.circular(70)),
             ),
-            child: Text('hellow'),
+            child: Column(
+              children: [
+                Expanded(
+                    child: Container(
+                  margin: const EdgeInsets.only(top: 20),
+                  // alignment: Alignment.center,
+                  child: Text(
+                    "New Expences",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  ),
+                )),
+                Expanded(flex: 4, child: Text("hello")),
+              ],
+            ),
           ),
         ),
       ),
