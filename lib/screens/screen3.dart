@@ -30,16 +30,7 @@ class _Screen3State extends State<Screen3> {
                   size: 20,
                 ),
               )),
-          backgroundColor: Color.fromARGB(255, 29, 63, 238),
-          elevation: 0.0,
-          iconTheme: const IconThemeData(color: Colors.white),
-          actionsIconTheme: const IconThemeData(color: Colors.white),
-          actions: const [
-            Padding(
-              padding: EdgeInsets.only(right: 30.0),
-              child: Icon(Icons.person),
-            )
-          ],
+          b
         ),
         body: Container(
           margin: const EdgeInsets.only(top: 12),
