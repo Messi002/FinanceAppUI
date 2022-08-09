@@ -1,7 +1,21 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:app/constants.dart';
-impo
+import 'package:app/utils/card3.dart';
+import 'package:app/utils/intro_button.dart';
+import 'package:flutter/material.dart';
+
+class Screen3 extends StatefulWidget {
+  const Screen3({Key? key}) : super(key: key);
+
+  @override
+  State<Screen3> createState() => _Screen3State();
+}
+
+class _Screen3State extends State<Screen3> {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 29, 63, 238),
         appBar: AppBar(
@@ -101,18 +115,7 @@ impo
                     flex: 0,
                     child: MyButton(
                       text: "Continue",
-                      color: Colors.black,
-                      textColor: Colors.white,
-                      isExtended: false,
-                    )),
-                SizedBox(
-                  height: 30,
-                ),
-                NumDisplay("1", "2", "3"),
-                SizedBox(
-                  height: 16,
-                ),
-                NumDisplay("4", "5", "6"),
+              
                 SizedBox(
                   height: 16,
                 ),
