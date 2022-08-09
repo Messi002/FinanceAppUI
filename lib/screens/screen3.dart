@@ -115,7 +115,18 @@ class _Screen3State extends State<Screen3> {
                     flex: 0,
                     child: MyButton(
                       text: "Continue",
-              
+                      color: Colors.black,
+                      textColor: Colors.white,
+                      isExtended: false,
+                    )),
+                SizedBox(
+                  height: 30,
+                ),
+                NumDisplay("1", "2", "3"),
+                SizedBox(
+                  height: 16,
+                ),
+                NumDisplay("4", "5", "6"),
                 SizedBox(
                   height: 16,
                 ),
@@ -138,12 +149,6 @@ class _Screen3State extends State<Screen3> {
   Expanded NumDisplay(String a, String b, String c) {
     return Expanded(
         flex: 0,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Text(a, style: kTextStyle),
-            Text(b, style: kTextStyle),
-            Text(c, style: kTextStyle),
           ],
         ));
   }
