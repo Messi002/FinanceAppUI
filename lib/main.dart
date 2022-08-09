@@ -2,7 +2,10 @@ import 'package:app/screens/screen1.dart';
 import 'package:app/screens/screen2.dart';
 import 'package:flutter/material.dart';
 
-v
+void main() {
+  runApp(const MyApp());
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
