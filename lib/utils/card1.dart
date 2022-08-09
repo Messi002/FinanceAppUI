@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 
 class Card1 extends StatelessWidget {
   Card1(
- 
+      {super.key,
+      required this.text1,
+      required this.text2,
+      required this.text3,
+      required this.color});
+
+  final String text1;
+  final String text2;
+  final String text3;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
