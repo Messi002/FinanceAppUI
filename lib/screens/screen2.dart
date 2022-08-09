@@ -23,7 +23,23 @@ class _Screen2State extends State<Screen2> {
           backgroundColor: Colors.grey[200],
         ),
         appBar: AppBar(
-          backg
+          backgroundColor: Color.fromARGB(255, 252, 250, 250),
+          elevation: 0.0,
+          iconTheme: const IconThemeData(color: Colors.black),
+          actionsIconTheme: const IconThemeData(color: Colors.black),
+          actions: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Screen3()));
+              },
+              child: Padding(
+                padding: EdgeInsets.only(right: 16.0),
+                child: Icon(Icons.person),
+              ),
+            )
+          ],
+        ),
         body: SafeArea(
           child: SingleChildScrollView(
             physics: AlwaysScrollableScrollPhysics(),
