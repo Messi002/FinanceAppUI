@@ -1,21 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:app/constants.dart';
-import 'package:app/utils/card3.dart';
-import 'package:app/utils/intro_button.dart';
-import 'package:flutter/material.dart';
-
-class Screen3 extends StatefulWidget {
-  const Screen3({Key? key}) : super(key: key);
-
-  @override
-  State<Screen3> createState() => _Screen3State();
-}
-
-class _Screen3State extends State<Screen3> {
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
+impo
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 29, 63, 238),
         appBar: AppBar(
@@ -30,7 +16,16 @@ class _Screen3State extends State<Screen3> {
                   size: 20,
                 ),
               )),
-          b
+          backgroundColor: Color.fromARGB(255, 29, 63, 238),
+          elevation: 0.0,
+          iconTheme: const IconThemeData(color: Colors.white),
+          actionsIconTheme: const IconThemeData(color: Colors.white),
+          actions: const [
+            Padding(
+              padding: EdgeInsets.only(right: 30.0),
+              child: Icon(Icons.person),
+            )
+          ],
         ),
         body: Container(
           margin: const EdgeInsets.only(top: 12),
