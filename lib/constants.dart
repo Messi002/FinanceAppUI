@@ -7,4 +7,9 @@ const kBgDecoration = BoxDecoration(
     Color.fromARGB(255, 15, 63, 230),
   ],
   begin: FractionalOffset(0, 0),
-  e
+  end: FractionalOffset(1.0, 0.0),
+  stops: [0.0, 1.0],
+  tileMode: TileMode.clamp,
+));
+
+const kTextStyle = TextStyle(fontWeight: FontWeight.bold, fontSize: 19);
